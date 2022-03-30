@@ -34,6 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo ${GITHUB_SHA}
 
       - name: Login to Docker Repository
         uses: docker/login-action@v1
@@ -49,5 +50,5 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goserver:${GITHUB_SHA::6}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goserver:${GITHUB_SHA}
 
