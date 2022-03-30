@@ -49,5 +49,5 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goserver:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/goserver:${GITHUB_SHA::6}
 
