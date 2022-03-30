@@ -38,3 +38,5 @@ jobs:
         run: |
           ls
           docker build -t vietanh271098/goserver .
+          docker login -u vietanh271098 -p Pham@123
+          docker push vietanh271098/goserver
