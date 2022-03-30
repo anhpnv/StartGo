@@ -34,3 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Build docker
+        run: |
+          ls
+          docker build -t vietanh271098/goserver .
